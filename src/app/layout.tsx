@@ -1,15 +1,13 @@
 import { Inter } from 'next/font/google'
 import { MantineProvider } from '@mantine/core'
-import { Notifications } from '@mantine/notifications'
 import '@mantine/core/styles.css'
-import '@mantine/notifications/styles.css'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'A modern portfolio website built with Next.js and Mantine',
+  title: 'Elena Thomas - Healthcare Informatics Professional',
+  description: 'Elena Thomas portfolio - Healthcare Informatics Professional with 5+ years clinical experience, Master\'s in Clinical Healthcare Informatics, expertise in PACS, EHR systems, healthcare data analysis, and clinical workflow optimization.',
 }
 
 export default function RootLayout({
@@ -56,7 +54,6 @@ export default function RootLayout({
             },
           }}
         >
-          <Notifications />
           {children}
         </MantineProvider>
       </body>
