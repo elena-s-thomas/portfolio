@@ -175,6 +175,24 @@ export default function Home() {
                   </Button>
                 </Group>
 
+                <div style={{
+                  width: '100%',
+                  height: '400px',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  backgroundColor: '#f8f9fa'
+                }}>
+                  <Image
+                    src="/health-ai-diagram.png"
+                    alt="Health AI Query Platform Architecture Diagram"
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+
                 <Text size="lg" c="gray.7" lh={1.6}>
                   A revolutionary platform that allows healthcare professionals and researchers to query
                   large medical datasets using natural language. Simply ask questions in plain English,
