@@ -154,8 +154,21 @@ export default function Home() {
                     component="a"
                     href="https://health-ai.elena-thomas.com/"
                     target="_blank"
-                    variant="light"
-                    color="blue"
+                    variant="filled"
+                    style={{
+                      backgroundColor: '#20c997',
+                      backgroundImage: 'linear-gradient(135deg, #20c997 0%, #12b886 100%)',
+                      boxShadow: '0 4px 14px 0 rgba(32, 201, 151, 0.4)',
+                      transition: 'all 0.3s ease',
+                    }}
+                    styles={{
+                      root: {
+                        '&:hover': {
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 6px 20px 0 rgba(32, 201, 151, 0.5)',
+                        }
+                      }
+                    }}
                     rightSection={<IconExternalLink size={16} />}
                   >
                     View Live Demo
