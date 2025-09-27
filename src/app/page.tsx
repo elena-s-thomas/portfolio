@@ -177,17 +177,19 @@ export default function Home() {
 
                 <div style={{
                   width: '100%',
-                  height: '400px',
+                  minHeight: '400px',
+                  maxHeight: '600px',
                   borderRadius: '8px',
                   overflow: 'hidden',
-                  backgroundColor: '#f8f9fa'
+                  backgroundColor: '#ffffff'
                 }}>
                   <Image
                     src="/health-ai-diagram.png"
                     alt="Health AI Query Platform Architecture Diagram"
                     style={{
                       width: '100%',
-                      height: '100%',
+                      height: 'auto',
+                      maxHeight: '600px',
                       objectFit: 'contain'
                     }}
                   />
