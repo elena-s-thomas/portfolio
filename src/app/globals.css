@@ -48,3 +48,20 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* About Section Mobile Responsive Styles */
+.about-container {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-title {
+    font-size: 2rem !important;
+  }
+}

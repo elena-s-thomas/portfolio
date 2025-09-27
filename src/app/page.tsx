@@ -49,10 +49,16 @@ export default function Home() {
       {/* About Section */}
       <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
         <Container size="lg">
-          <div style={{ display: 'flex', gap: '2rem' }}>
+          <div className="about-container">
             <div style={{ flex: 1 }}>
               <Stack gap="lg">
-                <Title order={2} size="2.5rem" fw={600} c="dark.8">
+                <Title
+                  order={2}
+                  size="2.5rem"
+                  fw={600}
+                  c="dark.8"
+                  className="about-title"
+                >
                   About Me
                 </Title>
                 <Text size="lg" c="gray.7" lh={1.6}>
