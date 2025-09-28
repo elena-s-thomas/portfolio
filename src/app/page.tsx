@@ -139,41 +139,45 @@ export default function Home() {
               <Title order={2} size="2.5rem" fw={600} c="dark.8" mb="md">
                 Featured Project
               </Title>
-              <Text size="xl" c="gray.7" maw={800} mx="auto">
+              <Text size="xl" c="gray.7" maw={800} mx="auto" mb="xl">
                 Natural Language Medical Data Query System
               </Text>
+              <Button
+                component="a"
+                href="https://health-ai.elena-thomas.com/"
+                target="_blank"
+                variant="filled"
+                size="lg"
+                style={{
+                  backgroundColor: '#ff6b35',
+                  backgroundImage: 'linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)',
+                  boxShadow: '0 6px 20px 0 rgba(255, 107, 53, 0.4)',
+                  transition: 'all 0.3s ease',
+                  fontSize: '16px',
+                  fontWeight: '600',
+                  padding: '12px 24px',
+                  borderRadius: '8px',
+                }}
+                styles={{
+                  root: {
+                    '&:hover': {
+                      transform: 'translateY(-3px) scale(1.05)',
+                      boxShadow: '0 8px 25px 0 rgba(255, 107, 53, 0.6)',
+                      backgroundImage: 'linear-gradient(135deg, #ff7a4a 0%, #ffa726 100%)',
+                    }
+                  }
+                }}
+                rightSection={<IconExternalLink size={18} />}
+              >
+                View Live Demo
+              </Button>
             </div>
 
             <Card shadow="sm" padding="xl" radius="md">
               <Stack gap="lg">
-                <Group justify="space-between" align="center">
-                  <Title order={3} size="1.5rem" fw={600} c="dark.8">
-                    Health AI Query Platform
-                  </Title>
-                  <Button
-                    component="a"
-                    href="https://health-ai.elena-thomas.com/"
-                    target="_blank"
-                    variant="filled"
-                    style={{
-                      backgroundColor: '#20c997',
-                      backgroundImage: 'linear-gradient(135deg, #20c997 0%, #12b886 100%)',
-                      boxShadow: '0 4px 14px 0 rgba(32, 201, 151, 0.4)',
-                      transition: 'all 0.3s ease',
-                    }}
-                    styles={{
-                      root: {
-                        '&:hover': {
-                          transform: 'translateY(-2px)',
-                          boxShadow: '0 6px 20px 0 rgba(32, 201, 151, 0.5)',
-                        }
-                      }
-                    }}
-                    rightSection={<IconExternalLink size={16} />}
-                  >
-                    View Live Demo
-                  </Button>
-                </Group>
+                <Title order={3} size="1.5rem" fw={600} c="dark.8" style={{ textAlign: 'center' }}>
+                  Health AI Query Platform
+                </Title>
 
                 <div style={{
                   width: '100%',
