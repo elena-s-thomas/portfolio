@@ -267,7 +267,7 @@ export default function Home() {
                           <strong>Standards:</strong> FHIR (Fast Healthcare Interoperability Resources)
                         </Text>
                         <Text size="sm" c="gray.7">
-                          <strong>Source:</strong> <a href="https://github.com/elena-s-thomas/health-query-ai" target="_blank" style={{ color: '#339af0', textDecoration: 'underline' }}>github.com/elena-s-thomas/health-query-ai</a> 
+                          <strong>Source:</strong> <a href="https://github.com/elena-s-thomas/health-query" target="_blank" style={{ color: '#339af0', textDecoration: 'underline' }}>github.com/elena-s-thomas/health-query</a> 
                         </Text>
                       </Stack>
                     </Stack>
