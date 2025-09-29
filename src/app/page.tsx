@@ -274,33 +274,6 @@ export default function Home() {
                   </Card>
                 </div>
 
-                <Card shadow="xs" padding="md" radius="md" style={{ backgroundColor: '#e7f5ff' }}>
-                  <Group gap="sm" align="center">
-                    <div style={{
-                      width: '40px',
-                      height: '40px',
-                      borderRadius: '50%',
-                      backgroundColor: '#339af0',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: 'white',
-                      fontSize: '20px'
-                    }}>
-                      💡
-                    </div>
-                    <div style={{ flex: 1 }}>
-                      <Text size="sm" fw={600} c="dark.7" mb={4}>
-                        Key Innovation
-                      </Text>
-                      <Text size="sm" c="gray.7">
-                        This platform bridges the gap between medical professionals and data analysis by eliminating
-                        the need for SQL knowledge. Healthcare workers can focus on insights rather than query syntax,
-                        making complex medical data accessible to everyone.
-                      </Text>
-                    </div>
-                  </Group>
-                </Card>
               </Stack>
             </Card>
           </Stack>
