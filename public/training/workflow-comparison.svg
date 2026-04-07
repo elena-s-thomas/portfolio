@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#212529">Workflow Optimization: Before &amp; After</text>
+
+  <defs>
+    <marker id="arr-center" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0, 10 4, 0 8" fill="#339af0"/>
+    </marker>
+  </defs>
+
+  <!-- ===== LEFT COLUMN: Before ===== -->
+  <rect x="20" y="44" width="330" height="330" rx="8" fill="#fff5f5" stroke="#ffa8a8" stroke-width="2"/>
+  <text x="185" y="70" text-anchor="middle" font-size="15" font-weight="bold" fill="#c92a2a">Before Optimization</text>
+
+  <!-- Row 1 -->
+  <rect x="35" y="84" width="300" height="54" rx="5" fill="#ffffff" stroke="#ffa8a8" stroke-width="1"/>
+  <text x="50" y="107" font-size="13" font-weight="bold" fill="#212529">Manual image layout</text>
+  <text x="50" y="127" font-size="12" fill="#c92a2a">45 sec per study</text>
+  <text x="305" y="114" text-anchor="end" font-size="22" fill="#ffa8a8">⌛</text>
+
+  <!-- Row 2 -->
+  <rect x="35" y="150" width="300" height="54" rx="5" fill="#ffffff" stroke="#ffa8a8" stroke-width="1"/>
+  <text x="50" y="173" font-size="13" font-weight="bold" fill="#212529">Manual prior retrieval</text>
+  <text x="50" y="193" font-size="12" fill="#c92a2a">2–3 min per case</text>
+  <text x="305" y="180" text-anchor="end" font-size="22" fill="#ffa8a8">⌛</text>
+
+  <!-- Row 3 -->
+  <rect x="35" y="216" width="300" height="54" rx="5" fill="#ffffff" stroke="#ffa8a8" stroke-width="1"/>
+  <text x="50" y="239" font-size="13" font-weight="bold" fill="#212529">Unfiltered worklist</text>
+  <text x="50" y="259" font-size="12" fill="#c92a2a">Extra search time per case</text>
+  <text x="305" y="246" text-anchor="end" font-size="22" fill="#ffa8a8">🔍</text>
+
+  <!-- TAT Before -->
+  <rect x="35" y="283" width="300" height="74" rx="5" fill="#ffe3e3" stroke="#fa5252" stroke-width="1.5"/>
+  <text x="185" y="310" text-anchor="middle" font-size="13" fill="#495057">Average Turnaround Time</text>
+  <text x="185" y="340" text-anchor="middle" font-size="30" font-weight="bold" fill="#fa5252">45 min</text>
+
+  <!-- ===== CENTER ARROW ===== -->
+  <rect x="360" y="170" width="80" height="60" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="400" y="192" text-anchor="middle" font-size="10" font-weight="bold" fill="#339af0">Configure</text>
+  <text x="400" y="206" text-anchor="middle" font-size="10" font-weight="bold" fill="#339af0">PACS</text>
+  <!-- Arrow pointing right -->
+  <line x1="365" y1="200" x2="355" y2="200" stroke="#339af0" stroke-width="0"/>
+  <polygon points="375,194 395,200 375,206" fill="#339af0"/>
+  <line x1="440" y1="200" x2="455" y2="200" stroke="#339af0" stroke-width="2.5" marker-end="url(#arr-center)"/>
+
+  <!-- ===== RIGHT COLUMN: After ===== -->
+  <rect x="450" y="44" width="330" height="330" rx="8" fill="#f4fce3" stroke="#8ce99a" stroke-width="2"/>
+  <text x="615" y="70" text-anchor="middle" font-size="15" font-weight="bold" fill="#2f9e44">After Optimization</text>
+
+  <!-- Row 1 -->
+  <rect x="465" y="84" width="300" height="54" rx="5" fill="#ffffff" stroke="#8ce99a" stroke-width="1"/>
+  <text x="480" y="107" font-size="13" font-weight="bold" fill="#212529">Hanging protocols</text>
+  <text x="480" y="127" font-size="12" fill="#2f9e44">Instant — auto layout on open</text>
+  <text x="735" y="114" text-anchor="end" font-size="22" fill="#8ce99a">⚡</text>
+
+  <!-- Row 2 -->
+  <rect x="465" y="150" width="300" height="54" rx="5" fill="#ffffff" stroke="#8ce99a" stroke-width="1"/>
+  <text x="480" y="173" font-size="13" font-weight="bold" fill="#212529">Pre-fetch enabled</text>
+  <text x="480" y="193" font-size="12" fill="#2f9e44">0 sec — priors ready on open</text>
+  <text x="735" y="180" text-anchor="end" font-size="22" fill="#8ce99a">⚡</text>
+
+  <!-- Row 3 -->
+  <rect x="465" y="216" width="300" height="54" rx="5" fill="#ffffff" stroke="#8ce99a" stroke-width="1"/>
+  <text x="480" y="239" font-size="13" font-weight="bold" fill="#212529">Priority worklist</text>
+  <text x="480" y="259" font-size="12" fill="#2f9e44">Top of queue — filtered view</text>
+  <text x="735" y="246" text-anchor="end" font-size="22" fill="#8ce99a">✓</text>
+
+  <!-- TAT After -->
+  <rect x="465" y="283" width="300" height="74" rx="5" fill="#d3f9d8" stroke="#40c057" stroke-width="1.5"/>
+  <text x="615" y="310" text-anchor="middle" font-size="13" fill="#495057">Average Turnaround Time</text>
+  <text x="615" y="340" text-anchor="middle" font-size="30" font-weight="bold" fill="#2f9e44">28 min</text>
+
+  <!-- Improvement callout -->
+  <rect x="353" y="283" width="94" height="74" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="400" y="305" text-anchor="middle" font-size="11" font-weight="bold" fill="#339af0">TAT</text>
+  <text x="400" y="320" text-anchor="middle" font-size="11" font-weight="bold" fill="#339af0">Savings</text>
+  <text x="400" y="342" text-anchor="middle" font-size="22" font-weight="bold" fill="#2f9e44">38%</text>
+</svg>

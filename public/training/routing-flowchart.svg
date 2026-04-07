@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#212529">Study Routing Decision Flow</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6c757d"/>
+    </marker>
+  </defs>
+
+  <!-- Study arrives box -->
+  <rect x="300" y="40" width="200" height="48" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="400" y="61" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Study Arrives at PACS</text>
+  <text x="400" y="79" text-anchor="middle" font-size="11" fill="#495057">New study received via C-STORE</text>
+
+  <!-- Arrow down to Modality diamond -->
+  <line x1="400" y1="88" x2="400" y2="118" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Modality type? diamond -->
+  <polygon points="400,118 470,148 400,178 330,148" fill="#fff9db" stroke="#fcc419" stroke-width="1.5"/>
+  <text x="400" y="144" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">Modality</text>
+  <text x="400" y="161" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">type?</text>
+
+  <!-- Branch labels on diamond -->
+  <text x="280" y="145" text-anchor="middle" font-size="11" fill="#6c757d">CT</text>
+  <text x="400" y="195" text-anchor="middle" font-size="11" fill="#6c757d">MR</text>
+  <text x="520" y="145" text-anchor="middle" font-size="11" fill="#6c757d">Other</text>
+
+  <!-- ===== CT branch (left) ===== -->
+  <line x1="330" y1="148" x2="200" y2="148" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="200" y1="148" x2="200" y2="178" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Body part? diamond (CT sub-diamond) -->
+  <polygon points="200,178 270,208 200,238 130,208" fill="#fff9db" stroke="#fcc419" stroke-width="1.5"/>
+  <text x="200" y="204" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">Body</text>
+  <text x="200" y="221" text-anchor="middle" font-size="12" font-weight="bold" fill="#212529">part?</text>
+
+  <!-- Head / ED labels -->
+  <text x="105" y="206" text-anchor="middle" font-size="11" fill="#6c757d">Head</text>
+  <text x="295" y="206" text-anchor="middle" font-size="11" fill="#6c757d">ED</text>
+  <text x="200" y="255" text-anchor="middle" font-size="11" fill="#6c757d">Other CT</text>
+
+  <!-- CT Head → Neuro Queue -->
+  <line x1="130" y1="208" x2="60" y2="208" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="60" y1="208" x2="60" y2="278" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="20" y="278" width="110" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="75" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Neuro Queue</text>
+  <text x="75" y="317" text-anchor="middle" font-size="10" fill="#339af0">CT Head studies</text>
+
+  <!-- CT ED → ED Queue -->
+  <line x1="270" y1="208" x2="340" y2="208" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="340" y1="208" x2="340" y2="278" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="300" y="278" width="110" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="355" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">ED Queue</text>
+  <text x="355" y="317" text-anchor="middle" font-size="10" fill="#339af0">Emergency studies</text>
+
+  <!-- CT Head ALSO → ED Queue note -->
+  <line x1="60" y1="278" x2="60" y2="263" stroke="#339af0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="60" y1="263" x2="340" y2="263" stroke="#339af0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="340" y1="263" x2="340" y2="278" stroke="#339af0" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <rect x="140" y="252" width="120" height="18" rx="3" fill="#e7f5ff" stroke="#339af0" stroke-width="1"/>
+  <text x="200" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#339af0">CT Head routes to BOTH</text>
+
+  <!-- CT Other (down from diamond) -->
+  <line x1="200" y1="238" x2="200" y2="278" stroke="#6c757d" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <rect x="152" y="340" width="96" height="40" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="200" y="358" text-anchor="middle" font-size="11" fill="#495057">General</text>
+  <text x="200" y="372" text-anchor="middle" font-size="11" fill="#495057">CT Queue</text>
+
+  <!-- ===== MR branch (down) ===== -->
+  <line x1="400" y1="178" x2="400" y2="278" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="348" y="278" width="104" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <!-- Shift MR queue to not overlap ED Queue -->
+  <rect x="458" y="278" width="120" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="518" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">MR Reading</text>
+  <text x="518" y="317" text-anchor="middle" font-size="10" fill="#339af0">Queue</text>
+
+  <!-- Override MR queue to proper position -->
+  <!-- Move MR to its own lane: arrow from diamond bottom, goes to 518 -->
+  <!-- Redraw: MR arrow from diamond (400,178) needs to go right to avoid overlap -->
+  <!-- Actually let me use the "Other" right side for MR -->
+
+  <!-- ===== Other branch (right) ===== -->
+  <line x1="470" y1="148" x2="610" y2="148" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="610" y1="148" x2="610" y2="278" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="558" y="278" width="120" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="618" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">General Queue</text>
+  <text x="618" y="317" text-anchor="middle" font-size="10" fill="#339af0">NM, US, XR, etc.</text>
+
+  <!-- Redo MR queue at far right -->
+  <rect x="688" y="278" width="100" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="738" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">MR Reading</text>
+  <text x="738" y="317" text-anchor="middle" font-size="10" fill="#339af0">Queue</text>
+
+  <!-- MR arrow from bottom of diamond going right then down -->
+  <line x1="400" y1="178" x2="400" y2="198" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="400" y1="198" x2="738" y2="198" stroke="#6c757d" stroke-width="1.5"/>
+  <line x1="738" y1="198" x2="738" y2="278" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- MR label -->
+  <text x="570" y="192" text-anchor="middle" font-size="11" fill="#6c757d">MR</text>
+
+  <!-- Legend / note -->
+  <rect x="20" y="345" width="120" height="42" rx="4" fill="#fff9db" stroke="#fcc419" stroke-width="1"/>
+  <text x="80" y="362" text-anchor="middle" font-size="10" font-weight="bold" fill="#495057">CT Head Note</text>
+  <text x="80" y="377" text-anchor="middle" font-size="10" fill="#495057">Routes to Neuro</text>
+  <text x="80" y="390" text-anchor="middle" font-size="10" fill="#495057">AND ED Queue</text>
+</svg>

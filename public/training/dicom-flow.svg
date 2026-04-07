@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#212529">How a Study Gets Into PACS</text>
+
+  <!-- ===== MAIN FLOW ROW (y=160) ===== -->
+
+  <!-- Modality box -->
+  <rect x="30" y="120" width="140" height="80" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="100" y="153" text-anchor="middle" font-size="14" font-weight="bold" fill="#212529">Modality</text>
+  <text x="100" y="171" text-anchor="middle" font-size="12" fill="#495057">CT / MRI / X-ray</text>
+  <text x="100" y="189" text-anchor="middle" font-size="11" fill="#495057">(DICOM SCU)</text>
+
+  <!-- Arrow: Modality → DICOM C-STORE label → PACS Server -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6c757d"/>
+    </marker>
+    <marker id="arrowhead-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#339af0"/>
+    </marker>
+    <marker id="arrowhead-down" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6c757d"/>
+    </marker>
+  </defs>
+
+  <!-- Arrow Modality → PACS Server -->
+  <line x1="170" y1="160" x2="285" y2="160" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- DICOM C-STORE label box (blue accent, on arrow) -->
+  <rect x="175" y="138" width="108" height="28" rx="4" fill="#e7f5ff" stroke="#339af0" stroke-width="1.5"/>
+  <text x="229" y="156" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">DICOM C-STORE</text>
+
+  <!-- PACS Server box (blue accent) -->
+  <rect x="285" y="120" width="150" height="80" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="360" y="153" text-anchor="middle" font-size="14" font-weight="bold" fill="#339af0">PACS Server</text>
+  <text x="360" y="171" text-anchor="middle" font-size="12" fill="#339af0">(SCP)</text>
+  <text x="360" y="189" text-anchor="middle" font-size="11" fill="#339af0">Receives &amp; Routes</text>
+
+  <!-- Arrow PACS Server → Archive -->
+  <line x1="435" y1="160" x2="545" y2="160" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="490" y="150" text-anchor="middle" font-size="11" fill="#6c757d">Store</text>
+
+  <!-- Archive box -->
+  <rect x="545" y="120" width="140" height="80" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="615" y="153" text-anchor="middle" font-size="14" font-weight="bold" fill="#212529">Archive</text>
+  <text x="615" y="171" text-anchor="middle" font-size="12" fill="#495057">Long-term</text>
+  <text x="615" y="189" text-anchor="middle" font-size="11" fill="#495057">Storage</text>
+
+  <!-- ===== PACS Server → Reading Worklist (downward) ===== -->
+  <line x1="360" y1="200" x2="360" y2="285" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowhead-down)"/>
+  <text x="372" y="248" font-size="11" fill="#6c757d">Route</text>
+
+  <!-- Reading Worklist box -->
+  <rect x="285" y="285" width="150" height="60" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="360" y="313" text-anchor="middle" font-size="14" font-weight="bold" fill="#212529">Reading Worklist</text>
+  <text x="360" y="331" text-anchor="middle" font-size="11" fill="#495057">Radiologist Queue</text>
+
+  <!-- ===== RIS/HIS SECONDARY PATH (top) ===== -->
+
+  <!-- RIS/HIS box -->
+  <rect x="285" y="30" width="150" height="60" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="360" y="56" text-anchor="middle" font-size="14" font-weight="bold" fill="#212529">RIS / HIS</text>
+  <text x="360" y="74" text-anchor="middle" font-size="11" fill="#495057">Order Management</text>
+
+  <!-- Arrow RIS/HIS ↕ Modality (Worklist Query) -->
+  <!-- Down arrow: RIS/HIS → Modality label area -->
+  <line x1="285" y1="60" x2="180" y2="60" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="180" y1="60" x2="180" y2="120" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowhead-down)"/>
+
+  <!-- Worklist Query label -->
+  <rect x="185" y="48" width="96" height="24" rx="4" fill="#e7f5ff" stroke="#339af0" stroke-width="1.5"/>
+  <text x="233" y="63" text-anchor="middle" font-size="11" font-weight="bold" fill="#339af0">Worklist Query</text>
+
+  <!-- Bidirectional indicator -->
+  <line x1="155" y1="72" x2="155" y2="118" stroke="#6c757d" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Legend -->
+  <rect x="660" y="30" width="120" height="80" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="720" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Legend</text>
+  <rect x="670" y="58" width="16" height="12" rx="2" fill="#e7f5ff" stroke="#339af0" stroke-width="1.5"/>
+  <text x="692" y="69" font-size="10" fill="#212529">Key component</text>
+  <rect x="670" y="78" width="16" height="12" rx="2" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="692" y="89" font-size="10" fill="#212529">Standard node</text>
+  <line x1="670" y1="103" x2="686" y2="103" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="692" y="107" font-size="10" fill="#212529">Data flow</text>
+</svg>
