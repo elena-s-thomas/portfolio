@@ -489,6 +489,135 @@ export default function Home() {
                 </div>
               </Stack>
             </Card>
+
+            <Card shadow="sm" padding="lg" radius="md" style={{ margin: '0 1rem' }}>
+              <Stack gap="lg">
+                <Group className="featured-project-header-group">
+                  <Title order={3} size="1.5rem" fw={600} c="dark.8">
+                    DICOM Metadata Explorer
+                  </Title>
+                  <Button
+                    component="a"
+                    href="https://dicom-explorer.streamlit.app"
+                    target="_blank"
+                    variant="light"
+                    color="blue"
+                    rightSection={<IconExternalLink size={16} />}
+                    className="demo-button-mobile"
+                  >
+                    View Live Demo
+                  </Button>
+                </Group>
+
+                <Text size="lg" c="gray.7" lh={1.6}>
+                  A browser-based tool for exploring DICOM medical imaging metadata. Upload
+                  any DICOM file — or select a bundled sample — to view its tags organized
+                  by clinical category: patient, study, series, equipment, and image
+                  parameters. Designed for radiology professionals, PACS administrators,
+                  and anyone working with medical imaging data.
+                </Text>
+
+                <Text size="lg" c="gray.7" lh={1.6}>
+                  Each tag displays its DICOM tag number (e.g., &quot;Accession Number
+                  (0008,0050)&quot;) alongside a plain-English tooltip explaining its
+                  clinical purpose — how it drives PACS routing, worklist matching, and
+                  display protocols. A conformance summary card flags missing required tags
+                  and identifies the SOP Class and Transfer Syntax.
+                </Text>
+
+                <div className="featured-project-grid">
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        How It Works
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>1. Load File:</strong> Upload a .dcm file or choose from bundled CT, MRI, and ultrasound samples
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>2. Parse Tags:</strong> pydicom reads all DICOM data elements from the file header
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>3. Categorize:</strong> Tags organized into clinical groups matching how PACS admins think about them
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>4. Search:</strong> Filter across all tags by name, tag number, or value instantly
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>5. Explore:</strong> Hover any tag name for a clinical explanation of its purpose
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        Technical Stack
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>Backend:</strong> Python with pydicom library
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Frontend:</strong> Streamlit for interactive UI
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Standards:</strong> DICOM (Digital Imaging and Communications in Medicine)
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Testing:</strong> pytest with in-memory DICOM datasets
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Deployment:</strong> Streamlit Community Cloud
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Source:</strong>{' '}
+                          <a
+                            href="https://github.com/elena-s-thomas/dicom-explorer"
+                            target="_blank"
+                            style={{ color: '#339af0', textDecoration: 'underline' }}
+                          >
+                            github.com/elena-s-thomas/dicom-explorer
+                          </a>
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+                </div>
+
+                <div className="innovation-card">
+                  <Group gap="sm" align="center">
+                    <div style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '50%',
+                      backgroundColor: '#339af0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontSize: '20px'
+                    }}>
+                      🔬
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <Text size="sm" fw={600} c="dark.7" mb={4}>
+                        Key Innovation
+                      </Text>
+                      <Text size="sm" c="gray.7">
+                        Demonstrates practical DICOM expertise — the foundational standard behind
+                        every PACS system. Tags are organized and described the way a PACS
+                        administrator thinks about them, not just as raw hex identifiers. pydicom
+                        is the industry-standard Python library used by clinical engineering teams
+                        for DICOM scripting and migration validation.
+                      </Text>
+                    </div>
+                  </Group>
+                </div>
+              </Stack>
+            </Card>
           </Stack>
         </div>
       </section>
