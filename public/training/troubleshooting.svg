@@ -1,8 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="system-ui, sans-serif">
-  <!-- Background -->
-  <rect width="800" height="400" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" font-family="system-ui, sans-serif">
+  <rect width="900" height="440" fill="#ffffff"/>
 
-  <!-- Title -->
   <text x="400" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#212529">Troubleshooting: Study Not in PACS</text>
 
   <defs>
@@ -15,95 +13,87 @@
     <marker id="arr-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
       <polygon points="0 0, 8 3, 0 6" fill="#40c057"/>
     </marker>
-    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#339af0"/>
-    </marker>
   </defs>
 
   <!-- START: Report Missing -->
-  <rect x="290" y="42" width="220" height="44" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
-  <text x="400" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Report: Study Missing</text>
-  <text x="400" y="78" text-anchor="middle" font-size="11" fill="#495057">User cannot find study in PACS</text>
+  <rect x="260" y="48" width="250" height="46" rx="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="385" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#212529">Report: Study Missing</text>
+  <text x="385" y="85" text-anchor="middle" font-size="11" fill="#495057">User cannot find study in PACS</text>
 
   <!-- Arrow down -->
-  <line x1="400" y1="86" x2="400" y2="106" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="385" y1="94" x2="385" y2="118" stroke="#6c757d" stroke-width="1.5" marker-end="url(#arr)"/>
 
-  <!-- Step 1: Check modality DICOM send log -->
-  <rect x="270" y="106" width="260" height="44" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
-  <text x="400" y="124" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Step 1</text>
-  <text x="400" y="142" text-anchor="middle" font-size="11" fill="#339af0">Check Modality DICOM Send Log</text>
+  <!-- Step 1 -->
+  <rect x="250" y="118" width="270" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="385" y="139" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Step 1</text>
+  <text x="385" y="157" text-anchor="middle" font-size="11" fill="#339af0">Check Modality DICOM Send Log</text>
 
-  <!-- Arrows from Step 1 -->
   <!-- FAIL branch (left) -->
-  <line x1="270" y1="128" x2="170" y2="128" stroke="#fa5252" stroke-width="1.5" marker-end="url(#arr-red)"/>
-  <text x="220" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">FAIL</text>
+  <line x1="250" y1="142" x2="155" y2="142" stroke="#fa5252" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="200" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">FAIL</text>
 
-  <!-- FAIL action box -->
-  <rect x="60" y="106" width="110" height="44" rx="6" fill="#fff5f5" stroke="#fa5252" stroke-width="1.5"/>
-  <text x="115" y="126" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">Fix Modality</text>
-  <text x="115" y="141" text-anchor="middle" font-size="11" fill="#fa5252">Config / Retry</text>
+  <rect x="30" y="118" width="125" height="48" rx="6" fill="#fff5f5" stroke="#fa5252" stroke-width="1.5"/>
+  <text x="92" y="139" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">Fix Modality</text>
+  <text x="92" y="156" text-anchor="middle" font-size="11" fill="#fa5252">Config / Retry</text>
 
-  <!-- SUCCESS branch (down) -->
-  <line x1="400" y1="150" x2="400" y2="170" stroke="#40c057" stroke-width="1.5" marker-end="url(#arr-green)"/>
-  <text x="412" y="163" font-size="11" font-weight="bold" fill="#40c057">SUCCESS</text>
+  <!-- SUCCESS down -->
+  <line x1="385" y1="166" x2="385" y2="198" stroke="#40c057" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <text x="400" y="186" font-size="11" font-weight="bold" fill="#40c057">OK</text>
 
-  <!-- Step 2: Check PACS comm logs -->
-  <rect x="270" y="170" width="260" height="44" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
-  <text x="400" y="188" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Step 2</text>
-  <text x="400" y="206" text-anchor="middle" font-size="11" fill="#339af0">Check PACS Comm Logs</text>
+  <!-- Step 2 -->
+  <rect x="250" y="198" width="270" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="385" y="219" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Step 2</text>
+  <text x="385" y="237" text-anchor="middle" font-size="11" fill="#339af0">Check PACS Comm Logs</text>
 
   <!-- NOT RECEIVED branch (left) -->
-  <line x1="270" y1="192" x2="170" y2="192" stroke="#fa5252" stroke-width="1.5" marker-end="url(#arr-red)"/>
-  <text x="220" y="184" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">NOT RX'd</text>
+  <line x1="250" y1="222" x2="155" y2="222" stroke="#fa5252" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="200" y="213" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">NOT RX'd</text>
 
-  <!-- NOT RECEIVED action box -->
-  <rect x="40" y="170" width="130" height="44" rx="6" fill="#fff5f5" stroke="#fa5252" stroke-width="1.5"/>
-  <text x="105" y="187" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">Check Network /</text>
-  <text x="105" y="202" text-anchor="middle" font-size="11" fill="#fa5252">AE Title Config</text>
+  <rect x="30" y="198" width="125" height="48" rx="6" fill="#fff5f5" stroke="#fa5252" stroke-width="1.5"/>
+  <text x="92" y="218" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">Check Network /</text>
+  <text x="92" y="235" text-anchor="middle" font-size="11" fill="#fa5252">AE Title Config</text>
 
-  <!-- RECEIVED branch (down) -->
-  <line x1="400" y1="214" x2="400" y2="234" stroke="#40c057" stroke-width="1.5" marker-end="url(#arr-green)"/>
-  <text x="412" y="228" font-size="11" font-weight="bold" fill="#40c057">RECEIVED</text>
+  <!-- RECEIVED down -->
+  <line x1="385" y1="246" x2="385" y2="278" stroke="#40c057" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <text x="400" y="266" font-size="11" font-weight="bold" fill="#40c057">RX'd</text>
 
-  <!-- Step 3: Check archive status -->
-  <rect x="270" y="234" width="260" height="44" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
-  <text x="400" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Step 3</text>
-  <text x="400" y="270" text-anchor="middle" font-size="11" fill="#339af0">Check Archive Status</text>
+  <!-- Step 3 -->
+  <rect x="250" y="278" width="270" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="385" y="299" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Step 3</text>
+  <text x="385" y="317" text-anchor="middle" font-size="11" fill="#339af0">Check Archive Status</text>
 
   <!-- REJECTED branch (left) -->
-  <line x1="270" y1="256" x2="170" y2="256" stroke="#fa5252" stroke-width="1.5" marker-end="url(#arr-red)"/>
-  <text x="220" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">REJECTED</text>
+  <line x1="250" y1="302" x2="155" y2="302" stroke="#fa5252" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="200" y="293" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">REJECTED</text>
 
-  <!-- REJECTED action box -->
-  <rect x="40" y="234" width="130" height="44" rx="6" fill="#fff5f5" stroke="#fa5252" stroke-width="1.5"/>
-  <text x="105" y="253" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">DICOM</text>
-  <text x="105" y="269" text-anchor="middle" font-size="11" fill="#fa5252">Conformance Issue</text>
+  <rect x="30" y="278" width="125" height="48" rx="6" fill="#fff5f5" stroke="#fa5252" stroke-width="1.5"/>
+  <text x="92" y="299" text-anchor="middle" font-size="11" font-weight="bold" fill="#fa5252">DICOM</text>
+  <text x="92" y="316" text-anchor="middle" font-size="11" fill="#fa5252">Conformance Issue</text>
 
-  <!-- ARCHIVED branch (down) -->
-  <line x1="400" y1="278" x2="400" y2="298" stroke="#40c057" stroke-width="1.5" marker-end="url(#arr-green)"/>
-  <text x="412" y="292" font-size="11" font-weight="bold" fill="#40c057">ARCHIVED</text>
+  <!-- ARCHIVED down -->
+  <line x1="385" y1="326" x2="385" y2="358" stroke="#40c057" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <text x="400" y="346" font-size="11" font-weight="bold" fill="#40c057">OK</text>
 
-  <!-- Final box: Check routing rules -->
-  <rect x="270" y="298" width="260" height="44" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
-  <text x="400" y="316" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Check Routing Rules /</text>
-  <text x="400" y="334" text-anchor="middle" font-size="11" fill="#339af0">Worklist Config</text>
+  <!-- Step 4: Check routing rules -->
+  <rect x="250" y="358" width="270" height="48" rx="6" fill="#e7f5ff" stroke="#339af0" stroke-width="2"/>
+  <text x="385" y="379" text-anchor="middle" font-size="12" font-weight="bold" fill="#339af0">Check Routing Rules /</text>
+  <text x="385" y="397" text-anchor="middle" font-size="11" fill="#339af0">Worklist Config</text>
 
-  <!-- Right-side failure annotations -->
-  <!-- AE Title tip -->
-  <rect x="550" y="106" width="220" height="100" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
-  <text x="660" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Common Causes</text>
-  <text x="555" y="140" font-size="10" fill="#495057">Step 1 FAIL: AE Title mismatch, wrong IP/port</text>
-  <text x="555" y="155" font-size="10" fill="#495057">Step 2 NOT RX: Firewall, network timeout</text>
-  <text x="555" y="170" font-size="10" fill="#495057">Step 3 REJECT: Missing/invalid DICOM tags</text>
-  <text x="555" y="185" font-size="10" fill="#495057">Step 3 ARCHIVED: Wrong routing rule applied</text>
+  <!-- Right-side: Common Causes -->
+  <rect x="590" y="110" width="270" height="105" rx="4" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="725" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Common Causes</text>
+  <text x="600" y="150" font-size="10" fill="#495057">Step 1 FAIL: AE Title mismatch, wrong IP/port</text>
+  <text x="600" y="168" font-size="10" fill="#495057">Step 2 NOT RX: Firewall, network timeout</text>
+  <text x="600" y="186" font-size="10" fill="#495057">Step 3 REJECT: Missing/invalid DICOM tags</text>
+  <text x="600" y="204" font-size="10" fill="#495057">Step 3 ARCHIVED: Wrong routing rule applied</text>
 
-  <!-- Resolution box -->
-  <rect x="550" y="220" width="220" height="80" rx="4" fill="#ebfbee" stroke="#40c057" stroke-width="1"/>
-  <text x="660" y="238" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Resolution Tips</text>
-  <text x="555" y="256" font-size="10" fill="#495057">- Verify AE Title on both ends match</text>
-  <text x="555" y="271" font-size="10" fill="#495057">- Check PACS error log for rejection reason</text>
-  <text x="555" y="286" font-size="10" fill="#495057">- Re-send after config correction</text>
+  <!-- Dashed connector to tips -->
+  <line x1="520" y1="166" x2="590" y2="166" stroke="#dee2e6" stroke-width="1" stroke-dasharray="3,3"/>
 
-  <!-- Connecting line to tips -->
-  <line x1="530" y1="150" x2="550" y2="150" stroke="#dee2e6" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Right-side: Resolution Tips -->
+  <rect x="590" y="235" width="270" height="90" rx="4" fill="#ebfbee" stroke="#40c057" stroke-width="1"/>
+  <text x="725" y="255" text-anchor="middle" font-size="11" font-weight="bold" fill="#212529">Resolution Tips</text>
+  <text x="600" y="275" font-size="10" fill="#495057">&#x2022; Verify AE Title on both ends match</text>
+  <text x="600" y="293" font-size="10" fill="#495057">&#x2022; Check PACS error log for rejection reason</text>
+  <text x="600" y="311" font-size="10" fill="#495057">&#x2022; Re-send after config correction</text>
 </svg>

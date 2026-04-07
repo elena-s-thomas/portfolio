@@ -15,16 +15,13 @@ export function FlowDiagram({ diagramKey, title }: FlowDiagramProps) {
         backgroundColor: 'var(--mantine-color-gray-0)',
         padding: 'var(--mantine-spacing-md)',
         borderRadius: 'var(--mantine-radius-sm)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'flex-start',
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={`/training/${diagramKey}.svg`}
         alt={title}
-        style={{ width: '100%', maxWidth: '800px', height: 'auto', display: 'block' }}
+        style={{ width: '100%', maxWidth: '800px', height: 'auto', display: 'block', margin: '0 auto' }}
       />
     </Box>
   )
