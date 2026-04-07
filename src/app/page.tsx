@@ -25,7 +25,7 @@ export default function Home() {
             <Group gap="md">
               <Button
                 component="a"
-                href="#featured-project"
+                href="#projects"
                 size="lg"
                 variant="filled"
                 color="gray.8"
@@ -47,12 +47,17 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section style={{ padding: '80px 0', backgroundColor: '#ffffff' }}>
+      <section style={{ padding: '60px 0', backgroundColor: '#ffffff' }}>
         <Container size="lg">
-          <div style={{ display: 'flex', gap: '2rem' }}>
-            <div style={{ flex: 1 }}>
+          <div className="about-section-grid">
+            <div className="about-text-content">
               <Stack gap="lg">
-                <Title order={2} size="2.5rem" fw={600} c="dark.8">
+                <Title
+                  order={2}
+                  fw={600}
+                  c="dark.8"
+                  className="about-title-mobile"
+                >
                   About Me
                 </Title>
                 <Text size="lg" c="gray.7" lh={1.6}>
@@ -75,7 +80,7 @@ export default function Home() {
                   collaborating across multidisciplinary teams to develop, test, and implement
                   data-driven strategies that enhance patient care and operational efficiency.
                 </Text>
-                <Group gap="md">
+                <Group gap="md" style={{ flexWrap: 'wrap' }}>
                   <Button
                     component="a"
                     href="https://github.com/elena-s-thomas"
@@ -99,16 +104,8 @@ export default function Home() {
                 </Group>
               </Stack>
             </div>
-            <div style={{ flex: 1 }}>
-              <div style={{
-                height: '400px',
-                backgroundColor: '#f8f9fa',
-                borderRadius: '8px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                overflow: 'hidden'
-              }}>
+            <div className="about-image-content">
+              <div className="about-image-container">
                 <Image
                   src="/healthcare-data-visualization.jpg"
                   alt="Elena Thomas"
@@ -126,21 +123,21 @@ export default function Home() {
       </section>
 
       {/* Featured Project Section */}
-      <section id="featured-project" style={{ padding: '80px 0', backgroundColor: '#f8f9fa' }}>
-        <Container size="lg">
+      <section id="projects" className="featured-project-section" style={{ backgroundColor: '#f8f9fa' }}>
+        <div className="featured-project-container">
           <Stack gap="xl">
             <div style={{ textAlign: 'center' }}>
-              <Title order={2} size="2.5rem" fw={600} c="dark.8" mb="md">
-                Featured Project
+              <Title order={2} fw={600} c="dark.8" mb="md" className="featured-project-title">
+                Projects
               </Title>
               <Text size="xl" c="gray.7" maw={800} mx="auto">
-                Natural Language Medical Data Query System
+                A growing collection of healthcare data &amp; AI projects
               </Text>
             </div>
 
-            <Card shadow="sm" padding="xl" radius="md">
+            <Card shadow="sm" padding="lg" radius="md" style={{ margin: '0 1rem' }}>
               <Stack gap="lg">
-                <Group justify="space-between" align="center">
+                <Group className="featured-project-header-group">
                   <Title order={3} size="1.5rem" fw={600} c="dark.8">
                     Health AI Query Platform
                   </Title>
@@ -151,6 +148,7 @@ export default function Home() {
                     variant="light"
                     color="blue"
                     rightSection={<IconExternalLink size={16} />}
+                    className="demo-button-mobile"
                   >
                     View Live Demo
                   </Button>
@@ -162,8 +160,8 @@ export default function Home() {
                   and the system automatically translates them to SQL using AI.
                 </Text>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
-                  <Card shadow="xs" padding="md" radius="md" h="100%">
+                <div className="featured-project-grid">
+                  <div className="project-detail-card">
                     <Stack gap="sm">
                       <Title order={4} size="1.1rem" fw={600} c="dark.7">
                         How It Works
@@ -186,9 +184,9 @@ export default function Home() {
                         </Text>
                       </Stack>
                     </Stack>
-                  </Card>
+                  </div>
 
-                  <Card shadow="xs" padding="md" radius="md" h="100%">
+                  <div className="project-detail-card">
                     <Stack gap="sm">
                       <Title order={4} size="1.1rem" fw={600} c="dark.7">
                         Technical Stack
@@ -211,10 +209,10 @@ export default function Home() {
                         </Text>
                       </Stack>
                     </Stack>
-                  </Card>
+                  </div>
                 </div>
 
-                <Card shadow="xs" padding="md" radius="md" style={{ backgroundColor: '#e7f5ff' }}>
+                <div className="innovation-card">
                   <Group gap="sm" align="center">
                     <div style={{
                       width: '40px',
@@ -240,11 +238,120 @@ export default function Home() {
                       </Text>
                     </div>
                   </Group>
-                </Card>
+                </div>
+              </Stack>
+            </Card>
+
+            <Card shadow="sm" padding="lg" radius="md" style={{ margin: '0 1rem' }}>
+              <Stack gap="lg">
+                <Group className="featured-project-header-group">
+                  <Title order={3} size="1.5rem" fw={600} c="dark.8">
+                    Healthcare Data Pipeline
+                  </Title>
+                  <Button
+                    component="a"
+                    href="https://github.com/elena-s-thomas/Healthcare-Data-Pipeline"
+                    target="_blank"
+                    variant="light"
+                    color="gray"
+                    rightSection={<IconBrandGithub size={16} />}
+                    className="demo-button-mobile"
+                  >
+                    View on GitHub
+                  </Button>
+                </Group>
+
+                <Text size="lg" c="gray.7" lh={1.6}>
+                  A cloud-native ETL pipeline that ingests, cleans, and transforms publicly
+                  available Medicare claims data at scale. Processes 343,644 beneficiary records
+                  and 66,705 inpatient claims across three years, with full orchestration,
+                  cloud storage, and analytics integration.
+                </Text>
+
+                <div className="featured-project-grid">
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        How It Works
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>1. Clean:</strong> Jupyter notebook normalizes demographics, ICD-9 codes, and claim dates
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>2. Store:</strong> Processed CSVs uploaded to Google Cloud Storage
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>3. Orchestrate:</strong> Mage AI runs DAG-based pipeline blocks (load → transform → export)
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>4. Warehouse:</strong> BigQuery loads patient demographics, claims, and diagnoses
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>5. Visualize:</strong> Looker Studio dashboards surface claims trends and readmissions
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        Technical Stack
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>Data Processing:</strong> Python, Pandas (343K+ records)
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Orchestration:</strong> Mage AI with DAG pipelines
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Cloud Storage:</strong> Google Cloud Storage
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Data Warehouse:</strong> BigQuery with SQL analytics
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Data Modeling:</strong> dbt with DuckDB backend
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+                </div>
+
+                <div className="innovation-card">
+                  <Group gap="sm" align="center">
+                    <div style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '50%',
+                      backgroundColor: '#339af0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontSize: '20px'
+                    }}>
+                      🏥
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <Text size="sm" fw={600} c="dark.7" mb={4}>
+                        Key Innovation
+                      </Text>
+                      <Text size="sm" c="gray.7">
+                        Uses the CMS DE-SynPUF synthetic Medicare dataset — publicly available,
+                        HIPAA-safe, and representative of real claims patterns — to demonstrate
+                        production-grade healthcare data engineering without requiring restricted
+                        data access.
+                      </Text>
+                    </div>
+                  </Group>
+                </div>
               </Stack>
             </Card>
           </Stack>
-        </Container>
+        </div>
       </section>
 
       {/* Footer */}
