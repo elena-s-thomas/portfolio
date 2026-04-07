@@ -23,7 +23,7 @@ export function KnowledgeCheck({ question, options, correctIndex, explanation }:
 
   return (
     <Stack gap="md">
-      <Text fw={600}>{question}</Text>
+      <Text fw={600} c="dark.8">{question}</Text>
 
       <Radio.Group
         value={selected ?? ''}
@@ -38,6 +38,7 @@ export function KnowledgeCheck({ question, options, correctIndex, explanation }:
               value={String(i)}
               label={option}
               disabled={submitted}
+              styles={{ label: { color: 'var(--mantine-color-dark-8)' } }}
             />
           ))}
         </Stack>

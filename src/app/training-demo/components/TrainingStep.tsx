@@ -18,13 +18,13 @@ export function TrainingStep({ lesson, onPrevious, onNext, isFirst, isLast }: Tr
     <Paper p="xl" withBorder>
       <Stack gap="xl">
         <Box>
-          <Title order={3}>Lesson {lesson.id}: {lesson.title}</Title>
+          <Title order={3} c="dark.8">Lesson {lesson.id}: {lesson.title}</Title>
           <Text fs="italic" c="gray.6" mt={4}>{lesson.subtitle}</Text>
         </Box>
 
         <Stack gap="sm">
           {lesson.explanation.map((paragraph, i) => (
-            <Text key={i}>{paragraph}</Text>
+            <Text key={i} c="gray.7" lh={1.6}>{paragraph}</Text>
           ))}
         </Stack>
 
@@ -39,8 +39,8 @@ export function TrainingStep({ lesson, onPrevious, onNext, isFirst, isLast }: Tr
               <Stack gap="sm">
                 {lesson.keyTerms.map(({ term, definition }) => (
                   <Box key={term}>
-                    <Text component="span" fw={700}>{term}: </Text>
-                    <Text component="span">{definition}</Text>
+                    <Text component="span" fw={700} c="dark.8">{term}: </Text>
+                    <Text component="span" c="gray.7">{definition}</Text>
                   </Box>
                 ))}
               </Stack>
