@@ -387,6 +387,108 @@ export default function Home() {
                 </div>
               </Stack>
             </Card>
+
+            <Card shadow="sm" padding="lg" radius="md" style={{ margin: '0 1rem' }}>
+              <Stack gap="lg">
+                <Group className="featured-project-header-group">
+                  <Title order={3} size="1.5rem" fw={600} c="dark.8">
+                    Interactive PACS Training Module
+                  </Title>
+                  <Button
+                    component="a"
+                    href="/training-demo"
+                    variant="light"
+                    color="blue"
+                    rightSection={<IconExternalLink size={16} />}
+                    className="demo-button-mobile"
+                  >
+                    Try the Demo
+                  </Button>
+                </Group>
+
+                <Text size="lg" c="gray.7" lh={1.6}>
+                  A self-guided interactive training walkthrough covering radiology study routing and worklist management in PACS systems. Designed to demonstrate the kind of application training an Application Specialist delivers to healthcare customers &mdash; with step-by-step lessons, visual workflow diagrams, and knowledge checks. Built to show both instructional design thinking and deep clinical workflow knowledge.
+                </Text>
+
+                <div className="featured-project-grid">
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        How It Works
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>1. Start the Module:</strong> Choose a lesson from the progress tracker or work through all 5 in sequence
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>2. Read &amp; Learn:</strong> Each lesson includes 2&ndash;3 paragraphs of clinical context plus a visual workflow diagram
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>3. Review Key Terms:</strong> Expand the collapsible glossary for DICOM, HL7, and PACS terminology
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>4. Test Your Knowledge:</strong> Answer a multiple-choice question with immediate feedback and explanation
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>5. Complete the Module:</strong> Review your results and access curated further reading resources
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        Technical Stack
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>Frontend:</strong> Next.js 15, React, TypeScript
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>UI:</strong> Mantine 8 components (Stepper, Accordion, Radio.Group, Paper)
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Diagrams:</strong> Hand-authored SVG workflow diagrams
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Content:</strong> 5 lessons covering DICOM, HL7, routing rules, troubleshooting, and optimization
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Architecture:</strong> Fully client-side, no backend &mdash; all content is static TypeScript data
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+                </div>
+
+                <div className="innovation-card">
+                  <Group gap="sm" align="center">
+                    <div style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '50%',
+                      backgroundColor: '#339af0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontSize: '20px'
+                    }}>
+                      💡
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <Text size="sm" fw={600} c="dark.7" mb={4}>
+                        Key Innovation
+                      </Text>
+                      <Text size="sm" c="gray.7">
+                        Demonstrates instructional design and clinical training expertise &mdash; the core skill behind Application Specialist and PACS Administrator roles. Most candidates have clinical experience; few can walk into an interview with a live, interactive training module they designed and built.
+                      </Text>
+                    </div>
+                  </Group>
+                </div>
+              </Stack>
+            </Card>
           </Stack>
         </div>
       </section>
