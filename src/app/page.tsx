@@ -175,9 +175,8 @@ export default function Home() {
                 </div>
 
                 <Text size="lg" c="gray.7" lh={1.6}>
-                  A revolutionary platform that allows healthcare professionals and researchers to query
-                  large medical datasets using natural language. Simply ask questions in plain English,
-                  and the system automatically translates them to SQL using AI.
+                  An AI-powered query tool that turns plain-English questions into SQL against large
+                  medical datasets.
                 </Text>
 
                 <Text size="lg" c="gray.7" lh={1.6}>
@@ -266,7 +265,7 @@ export default function Home() {
                     </div>
                     <div style={{ flex: 1 }}>
                       <Text size="sm" fw={600} c="dark.7" mb={4}>
-                        Key Innovation
+                        Why this matters
                       </Text>
                       <Text size="sm" c="gray.7">
                         This platform bridges the gap between medical professionals and data analysis by eliminating
@@ -374,7 +373,7 @@ export default function Home() {
                     </div>
                     <div style={{ flex: 1 }}>
                       <Text size="sm" fw={600} c="dark.7" mb={4}>
-                        Key Innovation
+                        Why CMS DE-SynPUF
                       </Text>
                       <Text size="sm" c="gray.7">
                         Uses the CMS DE-SynPUF synthetic Medicare dataset — publicly available,
@@ -479,7 +478,7 @@ export default function Home() {
                     </div>
                     <div style={{ flex: 1 }}>
                       <Text size="sm" fw={600} c="dark.7" mb={4}>
-                        Key Innovation
+                        Why this stands out
                       </Text>
                       <Text size="sm" c="gray.7">
                         Demonstrates instructional design and clinical training expertise &mdash; the core skill behind Application Specialist and PACS Administrator roles. Most candidates have clinical experience; few can walk into an interview with a live, interactive training module they designed and built.
@@ -604,7 +603,7 @@ export default function Home() {
                     </div>
                     <div style={{ flex: 1 }}>
                       <Text size="sm" fw={600} c="dark.7" mb={4}>
-                        Key Innovation
+                        Approach
                       </Text>
                       <Text size="sm" c="gray.7">
                         Demonstrates practical DICOM expertise — the foundational standard behind
