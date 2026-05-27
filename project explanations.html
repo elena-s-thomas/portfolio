@@ -1,0 +1,68 @@
+<section>
+    <h2>Health AI Query Platform</h2>
+    <p>This project uses Python libraries, Google BigQuery, and Google Vertex. The Python libraries I used are Streamlit and FastAPI.</p>
+    <ol>
+      <li>Streamlit has a bunch of UI components that are ready to use. The input boxes, the buttons, the layouts &mdash; everything on the UI is from that library.</li>
+      <li>FastAPI is the REST backend that takes the form data being sent by the Streamlit front end. It takes that request and makes a call to Vertex.</li>
+      <li>Vertex is an AI library that lets you call an LLM from the REST API. I have a prompt that tells the AI to generate a query from whatever question the user asked.</li>
+      <li>Once the LLM creates the SQL query, the REST API makes a call to BigQuery where the data set is stored.</li>
+      <li>Finally, we take the output of the query and send it back into Vertex and ask it to create a visualization and summary of the data it found.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Healthcare Data Pipeline</h2>
+    <p>This project was an exercise in cleaning data and using data pipelines. It uses Jupyter notebooks, CSV (comma-separated values) files, Mage AI, BigQuery, and Looker Studio.</p>
+    <ol>
+      <li>The dataset was a synthetic Medicare dataset with ICD-9 codes.</li>
+      <li>I used Jupyter to normalize some of the fields and then output CSV files.</li>
+      <li>I then used Mage AI, a pipeline tool, to take the CSV files as input. I used a transform stage in the pipeline to convert the data to use ICD-10 codes, which is a more modern standard.</li>
+      <li>The output of the pipeline was to store the data in BigQuery.</li>
+      <li>I created some simple Looker dashboards to visualize key aspects of the data.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Interactive PACS Training Module</h2>
+    <p>This project was mostly an experiment using Claude Code to create an interactive training module for PACS certification self-study.</p>
+    <p>The main topics included DICOM, HL7, and PACS terminology.</p>
+  </section>
+
+  <section>
+    <h2>DICOM Metadata Explorer</h2>
+    <p>This project was to help me understand more details about the DICOM file format as it relates to PACS. It uses existing Python libraries.</p>
+    <ol>
+      <li>The libraries used are pydicom and Streamlit. The UI is built in Streamlit because it has a bunch of existing UI elements already made. The DICOM file format was handled using pydicom because it already
+  understands the DICOM standard and makes accessing that data from Python apps easy.</li>
+      <li>You load a .dcm file, or choose one of the pre-loaded samples.</li>
+      <li>pydicom reads all the tags from the selected file and organizes them into clinical groups.</li>
+      <li>The search field searches across all the tags, and you can click through to see all the different tags.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>HL7 v2 to FHIR Integration Testbed</h2>
+    <p>This project was created to help practice troubleshooting HL7 v2 to FHIR message pipelines.</p>
+    <p>It uses:</p>
+    <ol>
+      <li>A Python script to simulate HL7 v2 messages coming out of an EHR system.</li>
+      <li>Mirth Connect, which is a healthcare integrations application.</li>
+      <li>An open-source FHIR R4 REST API called HAPI FHIR.</li>
+    </ol>
+
+    <h3>The setup in Mirth looks like this</h3>
+    <ol>
+      <li>A new channel is created (a channel is basically a pipeline). We have to configure the source, the transform, and the destination.</li>
+      <li>The source of the channel is set to be HL7 v2 messages.</li>
+      <li>The translation step converts the HL7 input message into JSON (JavaScript Object Notation).</li>
+      <li>The destination is set to be the FHIR R4 REST API, with JSON as the data type.</li>
+    </ol>
+
+    <h3>How it works</h3>
+    <ol>
+      <li>You &ldquo;send&rdquo; an HL7 message using the Python script.</li>
+      <li>In Mirth, you watch the channels for the messages coming into the system.</li>
+      <li>You can click each individual message, and each individual part of the channel (source, transform, destination) to see the status.</li>
+      <li>For troubleshooting errors, you can read the log messages for the stage where it failed to understand what the issue is.</li>
+    </ol>
+  </section>
