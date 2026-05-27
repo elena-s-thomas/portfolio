@@ -617,6 +617,155 @@ export default function Home() {
                 </div>
               </Stack>
             </Card>
+
+            <Card shadow="sm" padding="lg" radius="md" style={{ margin: '0 1rem' }}>
+              <Stack gap="lg">
+                <Group className="featured-project-header-group">
+                  <Title order={3} size="1.5rem" fw={600} c="dark.8">
+                    HL7 v2 to FHIR Integration Testbed
+                  </Title>
+                  <Button
+                    component="a"
+                    href="/hl7-fhir-testbed"
+                    variant="light"
+                    color="blue"
+                    rightSection={<IconExternalLink size={16} />}
+                    className="demo-button-mobile"
+                  >
+                    View Project Page
+                  </Button>
+                </Group>
+
+                <div style={{
+                  width: '100%',
+                  minHeight: '400px',
+                  maxHeight: '600px',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                  backgroundColor: '#ffffff'
+                }}>
+                  <Image
+                    src="/mirth-hapi-fhir/03-system-architecture.svg"
+                    alt="HL7 v2 to FHIR Integration Testbed Architecture Diagram"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      maxHeight: '600px',
+                      objectFit: 'contain'
+                    }}
+                  />
+                </div>
+
+                <Text size="lg" c="gray.7" lh={1.6}>
+                  A reproducible local pipeline for practicing the troubleshooting workflow integration
+                  engineers use every day. A Python CLI sends MLLP-framed HL7 v2 messages into Mirth
+                  Connect, which transforms each one into a FHIR Patient resource and POSTs it to a
+                  HAPI FHIR R4 server — every step visible in Mirth&apos;s Message Browser, the same
+                  tool used to debug production interfaces.
+                </Text>
+
+                <Text size="lg" c="gray.7" lh={1.6}>
+                  The CLI is built around nine deliberate error overlays — missing segments, bad
+                  date formats, unescaped delimiters, dropped MLLP framing — so the Message Browser
+                  fills with realistic failure modes. The pedagogically interesting cases are the
+                  silent ones: Mirth returns AA (Application Accept), HAPI happily stores the
+                  resource, and nobody notices the data is wrong until someone queries it weeks later.
+                </Text>
+
+                <div className="featured-project-grid">
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        How It Works
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>1. Send:</strong> Python CLI frames an HL7 v2 ADT message with MLLP and opens a TCP socket to Mirth
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>2. Listen:</strong> Mirth&apos;s TCP listener strips MLLP framing and parses segments
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>3. Transform:</strong> A JavaScript transformer maps PID fields into a FHIR Patient resource
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>4. POST:</strong> The HTTP Sender PUTs the Patient JSON into HAPI FHIR over HTTPS
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>5. Inspect:</strong> Use Mirth&apos;s Message Browser → Mappings tab to catch silent corruption
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+
+                  <div className="project-detail-card">
+                    <Stack gap="sm">
+                      <Title order={4} size="1.1rem" fw={600} c="dark.7">
+                        Technical Stack
+                      </Title>
+                      <Stack gap="xs">
+                        <Text size="sm" c="gray.7">
+                          <strong>Integration Engine:</strong> Mirth Connect (NextGen Connect)
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>FHIR Server:</strong> HAPI FHIR R4 with H2 storage
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>CLI:</strong> Python with Faker for locale-aware patient generation
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Standards:</strong> HL7 v2 (ADT, ORU), FHIR R4, MLLP framing
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Infrastructure:</strong> Docker Compose, fully reproducible locally
+                        </Text>
+                        <Text size="sm" c="gray.7">
+                          <strong>Source:</strong>{' '}
+                          <a
+                            href="https://github.com/elena-s-thomas/mirth-hapi-fhir"
+                            target="_blank"
+                            style={{ color: '#339af0', textDecoration: 'underline' }}
+                          >
+                            github.com/elena-s-thomas/mirth-hapi-fhir
+                          </a>
+                        </Text>
+                      </Stack>
+                    </Stack>
+                  </div>
+                </div>
+
+                <div className="innovation-card">
+                  <Group gap="sm" align="center">
+                    <div style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '50%',
+                      backgroundColor: '#339af0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: 'white',
+                      fontSize: '20px'
+                    }}>
+                      🔧
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <Text size="sm" fw={600} c="dark.7" mb={4}>
+                        Why this matters
+                      </Text>
+                      <Text size="sm" c="gray.7">
+                        Reproduces the day-to-day work of an interface analyst: reading Mirth&apos;s
+                        Message Browser, distinguishing transport failures from transformer errors
+                        from silent data corruption, and knowing which ACK code means what. The
+                        deliberate error overlays turn an integration sandbox into a debugging
+                        practice ground — exactly the skill set hiring managers look for on HL7
+                        integration teams.
+                      </Text>
+                    </div>
+                  </Group>
+                </div>
+              </Stack>
+            </Card>
           </Stack>
         </div>
       </section>
